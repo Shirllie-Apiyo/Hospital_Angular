@@ -1,0 +1,123 @@
+<div class="container">
+  <div fxLayout="row">
+    <div fxFlex="50">
+      <h3>Application Portal</h3>
+      <form action="">
+        <mat-form-field appearance="fill">
+          <mat-label>Your First Name</mat-label>
+          <input matInput placeholder="Your First Name" type="text" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Your Last Name</mat-label>
+          <input matInput placeholder="Your Last Name" type="text" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Your DOB</mat-label>
+          <input matInput placeholder="Your Paasword" type="password" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Your DOB</mat-label>
+          <input matInput placeholder="Your DOB" type="date" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Your Tel</mat-label>
+          <input
+            matInput
+            #message
+            maxlength="10"
+            placeholder="Your Tel"
+            type="tel"
+          />
+          <mat-hint align="start">Some Info</mat-hint>
+          <mat-hint align="end">{{ message.value.length }}/10</mat-hint>
+          <mat-icon matSuffix>phone_icon</mat-icon>
+          <span matPrefix> +254</span> &nbsp;&nbsp;
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Your Email Address</mat-label>
+          <input matInput placeholder="Your Email Address" type="email" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill" style="width: 80%">
+          <mat-label>Your Address</mat-label>
+          <textarea
+            matInput
+            #address
+            maxlength="50"
+            name=""
+            id=""
+            cols=""
+          ></textarea>
+          <mat-hint align="end">{{ address.value.length }}/50</mat-hint>
+        </mat-form-field>
+        <br />
+        <label for="">Select Your Learning Mode</label><br />
+        <mat-radio-group>
+          <mat-radio-button value="1">Part Time</mat-radio-button><br />
+          <mat-radio-button value="2">Full Time</mat-radio-button><br />
+          <mat-radio-button value="3"> Evening</mat-radio-button><br />
+        </mat-radio-group>
+        <br />
+        <label for="">Choose a Day</label><br />
+        <mat-radio-group>
+          <mat-radio-button *ngFor="let day of days" [value]="day">
+            {{ day }} &nbsp;&nbsp;
+          </mat-radio-button>
+        </mat-radio-group>
+        <br /><br />
+        <mat-form-field>
+          <mat-label> Select Your Day </mat-label>
+          <mat-select>
+            <mat-option *ngFor="let day of days" [value]="day">
+              {{ day }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br /><br />
+        <button mat-raised-button color="primary">Make Application</button>
+      </form>
+    </div>
+    <!-- Another flex ="50" -->
+    <div fxFlex="50">
+      <h2></h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Message</mat-label>
+        <input matInput value="Disco party!" #message />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Action</mat-label>
+        <input matInput value="Dance" #action />
+      </mat-form-field>
+
+      <button
+        mat-stroked-button
+        (click)="openSnackBar(message.value, action.value)"
+      >
+        Show snack-bar
+      </button>
+      <h2></h2>
+      <mat-slider aria-label="unit(s)"></mat-slider><br />
+      <mat-progress-bar mode="buffer"></mat-progress-bar><br />
+    </div>
+
+    <!-- DatePicker,ProgressBar,Button Toggle -->
+  </div>
+  <div fxLayout="row">
+    <div fxFlex="100">
+      <ng-image-slider
+        #nav
+        [images]="imgCollection"
+        [infinite]="true"
+        [autoSlide]="1"
+        [imageSize]="{ width: '20%', height: '20%' }"
+      >
+      </ng-image-slider>
+    </div>
+  </div>
+</div>

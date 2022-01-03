@@ -1,0 +1,137 @@
+<br />
+<mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1000"
+  step="1000"
+  min="0"
+  max="100000"
+  aria-label="units"
+></mat-slider>
+
+<br />
+<div class="row">
+  <div fxFlex="100">
+    <h3>Personal Details</h3>
+    <mat-vertical-stepper #stepper>
+      <mat-step>
+        <ng-template matStepLabel>Personal Details</ng-template>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quod
+          repudiandae dolore error saepe obcaecati eveniet omnis, iste excepturi
+          provident doloribus esse. Voluptates, maxime eaque officiis voluptatum
+          ipsum aut quia.
+        </p>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Education Details Details</ng-template>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quam et
+          debitis, quia temporibus adipisci ut vel animi, culpa commodi quas
+          suscipit voluptas officiis, doloribus magni beatae unde blanditiis
+          dolorem!
+        </p>
+        <button mat-raised-button matStepperPrevious>Prev</button>
+        <button mat-raised-button matStepperNext>Next</button>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Personal Details</ng-template>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+          tenetur iusto atque in quo voluptatem soluta corrupti similique eos!
+          Repudiandae quos tenetur provident ex accusantium, harum distinctio
+          animi pariatur officia.
+        </p>
+        <button mat-raised-button matStepperPrevious>Finish</button>
+        <label for="" matStepperLabel>You are done</label>
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
+</div>
+<!-- another stepper -->
+<br /><br />
+<h4>Job Application</h4>
+<br />
+<div fxLayout="row">
+  <div fxFlex="100">
+    <mat-stepper #stepper>
+      <mat-step>
+        <ng-template matStepLabel> Your Details </ng-template>
+        <form action="">
+          <mat-form-field appearance="fill">
+            <mat-label>Your First Name</mat-label>
+            <input
+              matInput
+              placeholder="Your First Name"
+              type="text"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field appearance="fill">
+            <mat-label>Your Last Name</mat-label>
+            <input
+              matInput
+              placeholder="Your Last Name"
+              type="text"
+            /> </mat-form-field
+          ><br />
+          <br />
+          <button mat-raised-button matStepperNext>Next</button>
+        </form>
+      </mat-step>
+
+      <mat-step>
+        <form action="">
+          <ng-template matStepLabel>Payment Details </ng-template>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Your Payment Details"
+              type="text"
+            /> </mat-form-field
+          ><br />
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Bank Account"
+              type="text"
+            /> </mat-form-field
+          ><br />
+          <br />
+          <button mat-raised-button matStepperPrevious>Prev</button>
+          <button mat-raised-button matStepperNext>Next</button>
+        </form>
+      </mat-step>
+
+      <mat-step>
+        <form action="">
+          <ng-template matStepLabel>Payment Details </ng-template>
+          <form action="">
+            <mat-form-field>
+              <mat-label> Select Your Day </mat-label>
+              <mat-select>
+                <mat-option>Kisumu</mat-option>
+                <mat-option>Nairobi</mat-option>
+              </mat-select> </mat-form-field
+            ><br />
+            <mat-form-field appearance="fill" style="width: 50%">
+              <mat-label>Your Address</mat-label>
+              <textarea
+                matInput
+                #address
+                maxlength="50"
+                name=""
+                id=""
+                cols=""
+              ></textarea>
+              <mat-hint align="end"
+                >{{ address.value.length }}/50</mat-hint
+              > </mat-form-field
+            ><br />
+            <br />
+            <button mat-raised-button matStepperNext>Finish</button>
+          </form>
+        </form>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</div>

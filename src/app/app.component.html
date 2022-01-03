@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- TODO side nav -->
+
+    <div class="container">
+      <div>
+        <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <button
+              mat-icon-button
+              (click)="sidenav.toggle()"
+              fxShow="true"
+              fxHide.gt-sm
+            >
+              <mat-icon>menu</mat-icon>
+            </button>
+            <span>Future Hospital</span>
+            <span class="menu-spacer"></span>
+            <div fxShow="true" fxHide.lt-md>
+              <!-- the followig menu items will be hidden on both SM and XS screen sizes -->
+              <a href="/home" mat-button>Home Page</a>
+              <a href="/details" mat-button>Details</a>
+              <a href="/products" mat-button>Products</a>
+              <a href="/apply" mat-button>Apply</a>
+              <a href="/grid" mat-button>Grid</a>
+              <a href="#" mat-button>Menu Item 6</a>
+            </div>
+          </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-sidenav-container fxFlexFill>
+          <mat-sidenav #sidenav>
+            <mat-nav-list>
+              <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+              <a href="/home" mat-list-item
+                ><mat-icon>brightness_3</mat-icon>Home</a
+              >
+              <a href="/details" mat-list-item
+                ><mat-icon>note_add</mat-icon>Details</a
+              >
+              <a href="/products" mat-list-item
+                ><mat-icon>published_with_changes</mat-icon>Services</a
+              >
+              <a href="/apply" mat-list-item
+                ><mat-icon>record_voice_over</mat-icon>Apply</a
+              >
+              <a href="#" mat-list-item
+                ><mat-icon>redeem</mat-icon>Menu Item 5</a
+              >
+              <a href="#" mat-list-item><mat-icon>loop</mat-icon>Menu Item 6</a>
+            </mat-nav-list>
+          </mat-sidenav>
+          <!-- below is the main content of the site -->
+          <mat-sidenav-content fxFlexFill>
+            <router-outlet></router-outlet>
+            <!-- below is the closing of the site content -->
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+      </div>
+
+      <!-- fx Layout.sm="column" and fxLayout.xs="column" same
+    fxLayout.lt-md="column" -->
+    </div>
+  </body>
+</html>

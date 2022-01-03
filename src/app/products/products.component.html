@@ -1,0 +1,160 @@
+<div class="container">
+  <!-- section 1 -->
+  <div fxLayout ="row" fxLayoutGap="10px" fxLayout.lt-md="column">
+    <div fxFlex ="50">
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>Laboratory </mat-card-title>
+              <mat-card-subtitle>Get Tested Today</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/lab.jpg" alt="laboratory">
+            <mat-card-content>
+              <p>{{laboratory}}</p>
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-flat-button color="primary">Read More</button>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+    <div fxFlex="50">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Pharmacy </mat-card-title>
+          <mat-card-subtitle>Get Medically Tested Today</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="/assets/lab.jpg" alt="laboratory">
+        <mat-card-content>
+          <p>{{laboratory}}</p>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <button mat-flat-button color="primary">Read More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div fxFlex="50">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Laboratory </mat-card-title>
+          <mat-card-subtitle>Get Tested Today</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="/assets/lab.jpg" alt="laboratory">
+        <mat-card-content>
+          <p>{{laboratory}}</p>
+        </mat-card-content>
+        <mat-card-actions align ="end">
+            <button mat-flat-button color="primary">Read More</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+
+  </div>
+  <!-- section 2 -->
+  <h3 id="care">Home Care Services</h3>
+  <hr>
+  <div fxLayout ="row" fxLayoutGap="10px" fxLayout.lt-md="column">
+    <div fxFlex="70">
+      <img src="/assets/care.jpg" alt="" id="home" width="100%">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores quis, quia deleniti at vitae adipisci velit. Repellat, vel. Obcaecati corrupti fugiat ut quod eveniet non ipsum repellendus cum enim nesciunt.</p>
+      <h2> Get 80% OFF this holiday!
+        <button mat-raised-button color="primary" style="margin-left: 10px;"
+        matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+        Days Remaining
+</button>
+      </h2>
+    </div>
+      <div fxFlex="30">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Laboratory </mat-card-title>
+          <mat-card-subtitle>Get Tested Today</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="/assets/lab.jpg" alt="laboratory">
+        <mat-card-content>
+          <p>{{laboratory}}</p>
+        </mat-card-content>
+        <mat-card-actions align ="end">
+            <button mat-flat-button color="primary">Read More</button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+
+    </div>
+
+    <!-- section3  -->
+    <h3 id="care">Partners</h3>
+    <hr>
+    <div fxLayout ="row" fxLayoutGap="15px" fxLayout.lt-md="column">
+      <!-- TODO TABS -->
+      <div fxFlex="100">
+        <mat-tab-group mat-align-tabs="start">
+          <mat-tab label="One">Safaricom</mat-tab>
+          <mat-tab label="Two">Britam</mat-tab>
+          <mat-tab label="Three">Liquid Telcom</mat-tab>
+          <mat-tab label="Four">Airtel</mat-tab>
+        </mat-tab-group>
+        <mat-tab-group mat-align-tabs="center">
+          <mat-tab label="One">Safaricom</mat-tab>
+          <mat-tab label="Two">Britam</mat-tab>
+          <mat-tab label="Three">Liquid Telcom</mat-tab>
+          <mat-tab label="Four">Airtel</mat-tab>
+        </mat-tab-group>
+        <mat-tab-group mat-align-tabs="end">
+          <mat-tab label="One">Safaricom</mat-tab>
+          <mat-tab label="Two">Britam</mat-tab>
+          <mat-tab label="Three">Liquid Telcom</mat-tab>
+          <mat-tab label="Four">Airtel</mat-tab>
+        </mat-tab-group>
+
+      </div>
+
+    </div>
+    <!-- section 4 do badge columns card and includes badges partners -->
+    <h3 id="care">MEDICINE</h3>
+    <hr>
+    <div fxLayout ="row" fxLayoutGap="15px" fxLayout.lt-md="column">
+      <div fxFlex="50">
+        <mat-card>
+          <mat-card-title>Painkillers </mat-card-title>
+          <mat-card-subtitle>Relieve Pain for headache</mat-card-subtitle>
+          <img src="/assets/painkillers.jpg" alt="painkillers">
+          <mat-card-content><p>{{painkiller}}</p></mat-card-content>
+          <mat-card-actions>
+            <p>
+              Button with a badge on the left
+              <button mat-raised-button color="primary"
+                  matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+                Action
+              </button>
+            </p>
+          </mat-card-actions>
+        </mat-card>
+
+      </div>
+      <div fxFlex="50">
+        <mat-card>
+          <mat-card-title>Antibiotics</mat-card-title>
+          <mat-card-subtitle>Bacteria</mat-card-subtitle>
+          <img src="/assets/painkillers.jpg" alt="painkillers">
+          <mat-card-content><p>{{antibiotic}}</p></mat-card-content>
+          <mat-card-actions>
+            <p>
+              Button with a badge on the left
+              <button mat-raised-button color="primary"
+                  matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+                Action
+              </button>
+            </p>
+          </mat-card-actions>
+        </mat-card>
+
+      </div>
+
+
+    </div>
+
+
+
+</div>

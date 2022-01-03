@@ -1,0 +1,60 @@
+.container {
+  padding: 3%;
+}
+.about {
+  color: white;
+  padding: 3%;
+  line-height: 1.5;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+* {
+  box-sizing: border-box;
+}
+/* display flex in row   wrap makes the divs shrink if no space */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* testimonials */
+.column {
+  flex: 25%;
+  padding: 1%;
+}
+/* media queries - specifies how page display in different screens */
+/* on screens that are less than 992px(tablets) show a 2 by2 */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 100%;
+  }
+}
+/* latest news */
+.colm-left {
+  flex: 20%;
+}
+.colm-center {
+  flex: 60%;
+}
+.colm-right {
+  flex: 20%;
+}
+@media screen and (max-width: 800px) {
+  .colm-left {
+    flex: 100%;
+  }
+  .colm-right,
+  .colm-center {
+    flex: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .colm-right,
+  .colm-center,
+  .colm-left {
+    flex: 100%;
+  }
+}

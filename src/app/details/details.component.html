@@ -1,0 +1,91 @@
+<div class="container">
+
+  <div fxLayout="row" >
+    <div fxFlex="100" fxLayoutAlign="end">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item >
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+
+    </div>
+
+  </div>
+  <!-- ==============================end section============================ -->
+  <div fxLayout="row">
+    <div fxFlex="100" fxLayoutAlign="end">
+      <mat-list role="list">
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+
+
+  <!-- lists -->
+  <!-- Grid List -->
+  <!-- Menu -->
+  <!-- type script basics -->
+
+                  <!-- SECTION 1 -->
+    <div fxLayout ="row">
+
+      <div fxFlex="100">
+        <!-- todo filter field -->
+        <mat-form-field>
+          <mat-label >Enter Search Term</mat-label>
+            <!-- key up detects the user event i.e entering something -->
+            <input matInput (keyup)="applyFilter($event)" placeholder="Enter search term" #input>
+
+        </mat-form-field>
+        <br><br>
+        <!-- tables goes here -->
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" width="100%">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Names</th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+          </ng-container>
+          <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef>Gender</th>
+            <td mat-cell *matCellDef="let element">{{element.gender}}</td>
+          </ng-container>
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef>Weight</th>
+            <td mat-cell *matCellDef="let element">{{element.weight}}</td>
+          </ng-container>
+          <ng-container matColumnDef="town">
+            <th mat-header-cell *matHeaderCellDef>Town</th>
+            <td mat-cell *matCellDef="let element">{{element.town}}</td>
+          </ng-container>
+          <ng-container matColumnDef="tel">
+            <th mat-header-cell *matHeaderCellDef>Contact</th>
+            <td mat-cell *matCellDef="let element">{{element.tel}}</td>
+          </ng-container>
+            <!-- other columns here -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns:displayedColumns"></tr>
+
+            <!-- no matching from filter -->
+            <tr *matNoDataRow style="text-align: center;">
+              <td colspan="5">No data matching {{input.value}}</td>
+
+            </tr>
+        </table>
+
+      </div>
+
+    </div>
+</div>
